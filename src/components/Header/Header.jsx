@@ -1,6 +1,7 @@
 import { MdLocationOn } from "react-icons/md";
 import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 function Header() {
   const [destination, setDestination] = useState("");
@@ -37,7 +38,7 @@ function Header() {
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
-          <HiCalendar className="headerIcon dateIcon"/>
+          <HiCalendar className="headerIcon dateIcon" />
           <div onClick={() => setOpenDate(!openDate)} className="dateDropDown">
             {/* {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
             date[0].endDate,
@@ -84,17 +85,34 @@ function Header() {
 
 export default Header;
 
-function GuestOptionList({ options, handleOptions }) {
+function GuestOptionList({ options, handleOptions, setOpenOptions }) {
+  const optionsRef = useRef();
+  useOutsideClick(optionsRef,"optionDropDown", () => setOpenOptions(false));
   return (
-    <div className="guestOptions">
-      <OptionItem handleOptions={handleOptions} type="adult" options={options} minLimit={1} />
-      <OptionItem handleOptions={handleOptions} type="children" options={options} minLimit={0} />
-      <OptionItem handleOptions={handleOptions} type="room" options={options} minLimit={1} />
+    <div className="guestOptions" ref={optionsRef}>
+      <OptionItem
+        handleOptions={handleOptions}
+        type="adult"
+        options={options}
+        minLimit={1}
+      />
+      <OptionItem
+        handleOptions={handleOptions}
+        type="children"
+        options={options}
+        minLimit={0}
+      />
+      <OptionItem
+        handleOptions={handleOptions}
+        type="room"
+        options={options}
+        minLimit={1}
+      />
     </div>
   );
 }
 
-function OptionItem({ options, type, minLimit ,handleOptions}) {
+function OptionItem({ options, type, minLimit, handleOptions }) {
   return (
     <div className="guestOptionItem">
       <span className="optionText">{type}</span>
@@ -102,12 +120,15 @@ function OptionItem({ options, type, minLimit ,handleOptions}) {
         <button
           className="optionCounterBtn"
           disabled={options[type] <= minLimit}
-          onClick={()=>handleOptions(type,"dec")}
+          onClick={() => handleOptions(type, "dec")}
         >
           <HiMinus className="icon" />
         </button>
         <span className="optionCounterNumber">{options[type]}</span>
-        <button className="optionCounterBtn"  onClick={()=>handleOptions(type,"inc")}>
+        <button
+          className="optionCounterBtn"
+          onClick={() => handleOptions(type, "inc")}
+        >
           <HiPlus className="icon" />
         </button>
       </div>
