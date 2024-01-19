@@ -24,7 +24,6 @@ function Header() {
     },
   ]);
   const [openDate, setOpenDate] = useState(false);
-  const navigate = useNavigate();
 
   const handleOptions = (name, operation) => {
     setOptions((prev) => {
@@ -34,6 +33,8 @@ function Header() {
       };
     });
   };
+
+  const navigate = useNavigate();
   const handleSearch = () => {
     const encodedParams = createSearchParams({
       date: JSON.stringify(date),
