@@ -10,10 +10,11 @@ function BookmarkProvider({ children }) {
   const [currentBookmark, setCurrentBookmark] = useState(null);
   const [isLoadingCurrBookmark, setIsLoadinCurrBookmark] = useState(false);
 
-  const { isLoading, data: bookmarks } = useFetch( `${BASE_URL}/bookmarks`);
+  const { isLoading, data: bookmarks } = useFetch(`${BASE_URL}/bookmarks`);
 
   async function getBookmark(id) {
     setIsLoadinCurrBookmark(true);
+    setCurrentBookmark(null);
     try {
       const { data } = await axios.get(`${BASE_URL}/bookmarks/${id}`);
       setCurrentBookmark(data);
