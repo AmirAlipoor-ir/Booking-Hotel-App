@@ -1334,15 +1334,6 @@
       "id": 1
     },
     {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
-    },
-    {
       "cityName": "Sanandaj",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1352,15 +1343,6 @@
       "id": 5
     },
     {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": 7
-    },
-    {
       "cityName": "Baba Kot",
       "country": "Pakistan",
       "countryCode": "PK",
@@ -1368,6 +1350,24 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Qazvin",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "36.27239423626449",
+      "longitude": "50.04709445777302",
+      "host_location": "Qazvin Iran (Islamic Republic of)",
+      "id": 9
+    },
+    {
+      "cityName": "Shahrud",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.33529347660534",
+      "longitude": "54.59828103195529",
+      "host_location": "Shahrud Iran (Islamic Republic of)",
+      "id": 10
     }
   ]
 }
