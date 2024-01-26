@@ -1325,15 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": 1
-    },
-    {
       "cityName": "Sanandaj",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1355,19 +1346,19 @@
       "cityName": "Qazvin",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
-      "latitude": "36.27239423626449",
-      "longitude": "50.04709445777302",
+      "latitude": "36.302081422846975",
+      "longitude": "50.01077950000764",
       "host_location": "Qazvin Iran (Islamic Republic of)",
-      "id": 9
+      "id": 10
     },
     {
-      "cityName": "Shahrud",
+      "cityName": "Tehran",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
-      "latitude": "35.33529347660534",
-      "longitude": "54.59828103195529",
-      "host_location": "Shahrud Iran (Islamic Republic of)",
-      "id": 10
+      "latitude": "35.75702471192961",
+      "longitude": "51.538925170898445",
+      "host_location": "Tehran Iran (Islamic Republic of)",
+      "id": 11
     }
   ]
 }
