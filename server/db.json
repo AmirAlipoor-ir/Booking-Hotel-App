@@ -1359,6 +1359,15 @@
       "longitude": "51.538925170898445",
       "host_location": "Tehran Iran (Islamic Republic of)",
       "id": 11
+    },
+    {
+      "cityName": "Melisey",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "47.92440489937657",
+      "longitude": "4.079122573437824",
+      "host_location": "Melisey France",
+      "id": 12
     }
   ]
 }
