@@ -6,7 +6,12 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
-import {NavLink, createSearchParams,useNavigate,useSearchParams,} from "react-router-dom";
+import {
+  NavLink,
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 
 function Header() {
@@ -51,6 +56,8 @@ function Header() {
       search: encodedParams.toString(),
     });
   };
+  const DateRef = useRef();
+  useOutsideClick(DateRef, "dateDropDown", () => setOpenDate(false));
 
   return (
     <div className="header">
@@ -69,9 +76,13 @@ function Header() {
           />
           <span className="seperator"></span>
         </div>
-        <div className="headerSearchItem">
+        <div className="headerSearchItem" ref={DateRef}>
           <HiCalendar className="headerIcon dateIcon" />
-          <div onClick={() => setOpenDate(!openDate)} className="dateDropDown">
+          <div
+            onClick={() => setOpenDate(!openDate)}
+            className="dateDropDown"
+            id="dateDropDown"
+          >
             {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
               date[0].endDate,
               "MM/dd/yyyy"
