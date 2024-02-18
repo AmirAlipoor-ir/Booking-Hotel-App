@@ -1368,6 +1368,15 @@
       "longitude": "4.079122573437824",
       "host_location": "Melisey France",
       "id": 12
+    },
+    {
+      "cityName": "Grunheide",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "52.440816955083896",
+      "longitude": "13.908691406250002",
+      "host_location": "Grunheide Germany",
+      "id": 13
     }
   ]
 }

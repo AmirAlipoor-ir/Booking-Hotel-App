@@ -74,8 +74,8 @@ function Header() {
             name="destination"
             id="destination"
           />
-          <span className="seperator"></span>
         </div>
+        <span className="seperator"></span>
         <div className="headerSearchItem" ref={DateRef}>
           <HiCalendar className="headerIcon dateIcon" />
           <div
@@ -97,9 +97,10 @@ function Header() {
               moveRangeOnFirstSelection={true}
             />
           )}
-          <span className="seperator"></span>
+          {/* <span className="seperator"></span> */}
         </div>
-        <div className="headerSearchItem">
+        <span className="seperatorTwo"></span>
+        <div className="headerSearchItem optionDropDown">
           <div id="optionDropDown" onClick={() => setOpenOptions(!openOptions)}>
             {options.adult} adult &nbsp;&bull;&nbsp; {options.children} children
             &nbsp;&bull;&nbsp;
@@ -112,8 +113,8 @@ function Header() {
               handleOptions={handleOptions}
             />
           )}
-          <span className="seperator"></span>
         </div>
+        <span className="seperatorThree"></span>
         <div className="headerSearchItem">
           <button className="headerSearchBtn" onClick={handleSearch}>
             <HiSearch className="headerIcon" />
