@@ -61,7 +61,6 @@ function Header() {
 
   return (
     <div className="header">
-      <NavLink to="/bookmark">Bookmarks</NavLink>
       <div className="headerSearch">
         <div className="headerSearchItem">
           <MdLocationOn className="headerIcon locationIcon" />
@@ -115,13 +114,19 @@ function Header() {
           )}
         </div>
         <span className="seperatorThree"></span>
-        <div className="headerSearchItem">
+        <div className="headerSearchItem headerSearchMainBtn">
           <button className="headerSearchBtn" onClick={handleSearch}>
             <HiSearch className="headerIcon" />
           </button>
         </div>
       </div>
-      <User />
+
+      <div className="routes">
+        <NavLink className="itemOfRoutes" to="/bookmark">
+          Bookmarks
+        </NavLink>
+        <User />
+      </div>
     </div>
   );
 }
@@ -188,7 +193,7 @@ function User() {
   };
 
   return (
-    <div>
+    <div className="itemOfRoutes">
       {isAuthenticated ? (
         <div>
           <strong>{user.name}</strong>
