@@ -3,7 +3,7 @@
 .headerSearch {
   display: flex;
   flex-wrap: wrap;
-  min-width: 285px;
+  min-width: 260px;
   max-width: 900px;
   justify-content: space-between;
   align-items: center;
@@ -176,9 +176,14 @@
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
   .locationItem {
     width: 90%;
+  }
+}
+@media screen and (min-width: 320px) {
+  .locationItem {
+    width: 100%;
   }
 }
 
@@ -248,7 +253,13 @@
   z-index: 1000;
 }
 .map {
-  height: 100%;
+  height: 95%;
+}
+
+@media screen and (min-width: 650px) {
+  .map {
+    height: 100%;
+  }
 }
 
 .searchList {
@@ -296,9 +307,14 @@
   /* background-color: var(--text-100); */
   align-items: stretch;
 }
+@media screen and (min-width: 650px) {
+  .sidebar {
+    width: 35%;
+  }
+}
 
 .sidebar {
-  width: 35%;
+  width: 50%;
   overflow-y: scroll;
   padding-right: 1rem;
 }
@@ -328,6 +344,14 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 500px) {
+  .bookmarkItem {
+    font-size: smaller;
+  }
+}
+
+
+
 .bookmarkList .bookmarkItem.current-bookmark {
   border: 2px solid var(--primary-600);
   background-color: var(--text-100);
@@ -343,6 +367,16 @@
   height: 1.1rem;
 }
 
+@media screen and (max-width: 420px) {
+  .bookmarkItem {
+    flex-direction: column;
+  }
+
+  .bookmarkItem .trash {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
 /* form */
 
 .form .formControl {
