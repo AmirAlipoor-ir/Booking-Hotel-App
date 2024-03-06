@@ -1359,6 +1359,15 @@
       "longitude": "13.908691406250002",
       "host_location": "Grunheide Germany",
       "id": 13
+    },
+    {
+      "cityName": "Toutencourt",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.038361499664425",
+      "longitude": "2.466934419716012",
+      "host_location": "Toutencourt France",
+      "id": 14
     }
   ]
 }

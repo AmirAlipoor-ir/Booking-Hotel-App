@@ -11,6 +11,7 @@
   border-radius: 1.5rem;
   padding: 1rem;
 }
+
 .headerSearchInput {
   padding: 0.3rem 0.1rem;
   width: 100%;
@@ -37,6 +38,7 @@
   background-color: var(--text-400);
   margin: 0 1rem;
 }
+
 .seperatorTwo {
   width: 85%;
   height: 1px;
@@ -48,6 +50,40 @@
   height: 1px;
   background-color: var(--text-400);
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .headerSearch {
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1rem;
+  }
+  .headerSearchInput {
+    padding: 0.7rem 0.5rem;
+    font-size: 1rem;
+  }
+  .headerSearchItem {
+    width: 100%;
+  }
+  .seperator {
+    width: 1px;
+    height: 30px;
+  }
+  .seperatorTwo {
+    width: 1px;
+    height: 30px;
+  }
+  .seperatorThree{
+    width: 1px;
+    height: 30px;
+    margin: 0 1rem;
+  }
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 .textField {
   padding: 0.7rem 1rem;
@@ -139,6 +175,15 @@
   border-radius: 1rem;
   width: 100%;
   min-width: 250px;
+}
+@media screen and (min-width: 700px) {
+  .headerSearchBtn{
+    min-width: 15px;
+    width: 70%;
+  }
+  .headerSearchMainBtn{
+    width: 70%;
+  }
 }
 .routes {
   display: flex;
@@ -349,8 +394,6 @@
     font-size: smaller;
   }
 }
-
-
 
 .bookmarkList .bookmarkItem.current-bookmark {
   border: 2px solid var(--primary-600);
