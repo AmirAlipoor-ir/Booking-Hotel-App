@@ -67,12 +67,14 @@
   .seperator {
     width: 1px;
     height: 30px;
+    margin: 0;
   }
   .seperatorTwo {
     width: 1px;
     height: 30px;
+    margin: 0;
   }
-  .seperatorThree{
+  .seperatorThree {
     width: 1px;
     height: 30px;
     margin: 0 1rem;
@@ -83,6 +85,9 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+  }
+  .optionDropDown {
+    font-size: 0.9rem;
   }
 }
 .textField {
@@ -144,9 +149,17 @@
 .date {
   position: absolute;
   top: 30px;
-  right: 0.1rem;
+  right: -13px;
+  max-width: 310px;
   z-index: 1002;
   border-radius: 5px;
+}
+@media screen and (min-width: 375px) {
+  .date{
+    right: -5px;
+  max-width: 320px;
+
+  }
 }
 
 .dateIcon {
@@ -177,12 +190,21 @@
   min-width: 250px;
 }
 @media screen and (min-width: 700px) {
-  .headerSearchBtn{
+  .headerSearchBtn {
     min-width: 15px;
     width: 70%;
   }
-  .headerSearchMainBtn{
+  .headerSearchMainBtn {
     width: 70%;
+  }
+  .dateDropDown {
+    font-size: 0.8rem;
+  }
+  .date{
+    top: 30px;
+    right: 0.1rem;
+  max-width: none;
+
   }
 }
 .routes {
