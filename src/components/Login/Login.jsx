@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("user@gmail.com");
-  const [password, setPassword] = useState("1234");
+  const [password, setPassword] = useState("15141312");
   const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const handleSubmit = (e) => {
